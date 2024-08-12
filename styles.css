@@ -1,1 +1,147 @@
 /* your code here */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+    background-color: #11bd61;
+}
+
+.photo-container{
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.product__photo{
+    position: relative;
+    z-index: 2;
+    transform: translate3d(-140px, 92px, 0px);
+}
+
+.photo-main{
+    background-color: rgb(122, 205, 50);
+    width: 220px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.photo-main .control{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+
+}
+
+.photo-main img{
+    width: 180px;
+    height: 250px;
+}
+
+.photo-album{
+    padding: 5px;
+}
+
+.photo-album ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.photo-album ul li{
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.photo-album ul li img{
+    width: 40px;
+    height: 40px;
+}
+
+.product__info{
+    background-color: #fff;
+    width: 380px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 1; /* Send the info section behind the photo section */
+    transform: translateY(-300px);
+    overflow: hidden; /* Hide any overflow from the overlapping photo section */
+     /* Adjust padding to ensure content is not covered */
+    padding-left: 180px;
+}
+
+.title, .price, .variant, .description {
+    margin-bottom: 15px;
+    /* text-align: center; */
+}
+
+.title h1{
+    font-weight: bolder;
+    font-size: 28px; /* Increase the font size for prominence */
+    color: #333; /* Dark gray for better readability */
+    margin-bottom: 10px; /* Add some space below the title */
+}
+
+.price {
+    color: red;
+    font-size: 15px; /* Maintain a good balance between the title and price */
+    margin-bottom: 10px; /* Add space below the price */
+}
+
+.price span{
+    font-size: 30px;
+}
+
+.variant ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px; /* Space between the color options */
+    margin-top: 10px;
+}
+
+.variant ul li {
+    display: inline-block;
+    cursor: pointer; /* Indicate that the items are interactive */
+}
+
+.variant ul li img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Make the color options circular */
+    border: 1px solid #ccc; /* Add a light border around the color options */
+    transition: border-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.variant ul li img:hover {
+    border-color: #000; /* Change border color on hover */
+}
+
+.btn{
+    background-color: #008CBA; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: #005f7a; /* Darker blue on hover */
+}
+
+
